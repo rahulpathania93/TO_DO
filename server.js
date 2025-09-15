@@ -11,8 +11,8 @@ const PORT = process.env.PORT || 8080;
 // Serve static files from dist
 app.use(express.static(path.join(__dirname, "dist")));
 
-// Catch-all handler (for React Router)
-app.get("*", (req, res) => {
+// Catch-all route (for React Router)
+app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
