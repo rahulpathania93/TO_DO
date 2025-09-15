@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  
   "scripts": {
     "dev": "vite",
     "lint": "eslint .",
@@ -12,7 +11,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^5.1.0",
+    "express": "^4.21.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
@@ -40,7 +39,6 @@
     ]
   },
   "engines": {
-  "node": "18.x"
-}
-
+    "node": "18.x"
+  }
 }
