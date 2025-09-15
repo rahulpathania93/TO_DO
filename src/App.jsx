@@ -257,12 +257,10 @@ function App() {
     console.log("out-----------");
   }
   function deleteTask(index) {
-    console.log("delete button started", index);
-    // const data = tasks.filter((task, i) => i !== index);
-    const data = tasks.filter((task, i) => <span style={{textDecoration:"line-through"}}>{task}</span>);
-    console.log("data", data);
-    updatedTasks(data);
-  }
+  const data = tasks.filter((_, i) => i !== index);
+  updatedTasks(data);
+}
+
   return (
     <div style={{}}>
       <h1
