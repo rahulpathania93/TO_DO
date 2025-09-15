@@ -12,9 +12,11 @@ const PORT = process.env.PORT || 8080;
 app.use(express.static(path.join(__dirname, "dist")));
 
 // Catch-all route (for React Router)
-app.get("/*", (req, res) => {
+// Catch-all route for React Router
+app.get(/.*/, (req, res) => {
   res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
+
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
